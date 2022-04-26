@@ -1,1 +1,1 @@
-export { SimpleGreeting } from './components/test/Test';
+export { Heading } from './components/heading/Heading';
