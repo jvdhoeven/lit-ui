@@ -5,6 +5,9 @@ import '../components/container/Container';
 import '../components/section/Section';
 import '../components/grid/Grid';
 
+import teaserOne from './teaser1.jpg';
+import teaserTwo from './teaser2.png';
+
 export default {
   title: 'Docs/Page',
 };
@@ -14,19 +17,19 @@ export const Primary = () => html`<div>
     <ui-container>
       <ui-heading>Warum eine smartgarden App?</ui-heading>
       <ui-grid container>
-        <ui-grid item xs="12" sm="6" md="4">
+        <ui-grid item md="4">
           <ui-heading variant="h2">Bewässerungsplan</ui-heading>
           <p>
             Individualisierbare Bewässerungsplände für alle deine Bedürfnisse.
           </p>
         </ui-grid>
-        <ui-grid item xs="12" sm="6" md="4">
+        <ui-grid item md="4">
           <ui-heading variant="h2">Temperaturmessung</ui-heading>
           <p>
             Mit den Temperatursensoren am smartgarden device weißt du immer, welche Temperatur in deinem Beet herscht.
           </p>
         </ui-grid>
-        <ui-grid item xs="12" sm="6" md="4">
+        <ui-grid item md="4">
           <ui-heading variant="h2">Bodenfeuchtigkeit</ui-heading>
           <p>
             Perfekte Bedingungen für deine Pflanzen erreichst du durch eine optimale Bodenfeuchte.
@@ -40,10 +43,10 @@ export const Primary = () => html`<div>
       <ui-heading>Die Funktionen</ui-heading>
 
       <ui-grid container>
-        <ui-grid item sm="6">
-          Bild
+        <ui-grid item md="6">
+          <img src=${teaserOne} width="100%" />
         </ui-grid>
-        <ui-grid item sm="6">
+        <ui-grid item md="6">
           <ui-heading variant="h3">Übersicht</ui-heading>
           <ul>
                 <li>Erstellung von Bewässerungsplänen</li>
@@ -54,14 +57,14 @@ export const Primary = () => html`<div>
       </ui-grid>
 
       <ui-grid container>
-        <ui-grid item sm="6">
+        <ui-grid item md="6">
           <ui-heading variant="h3">Smardgarden Device</ui-heading>
           <p>
             Das Smartgarden Device macht dein Hoochbeet smart und lässt sich über die smartgarden app bedienen.
           </p>
         </ui-grid>
-        <ui-grid item sm="6">
-          Bild
+        <ui-grid item md="6">
+          <img src=${teaserTwo} width="100%" />
         </ui-grid>
       </ui-grid>
     <ui-container>

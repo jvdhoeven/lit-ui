@@ -11,6 +11,14 @@ module.exports = {
         use: 'ts-loader',
         exclude: [/node_modules/, /\.stories\.ts$/],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   resolve: {
