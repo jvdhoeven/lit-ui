@@ -1,5 +1,6 @@
 import { html } from 'lit';
 
+import '../components/hero/Hero';
 import '../components/heading/Heading';
 import '../components/container/Container';
 import '../components/section/Section';
@@ -13,27 +14,37 @@ export default {
 };
 
 export const Primary = () => html`<div>
+  <ui-hero>
+    <ui-heading slot="heading">Mit der smartgarden App zum grünen Daumen.</ui-heading>
+    <p slot="text">Nie wieder vertrocknete Pflanzen. Nie wieder hohe Wasserkostenabrechnungen. Die Lösung in einer App.</p>
+  </ui-hero>
   <ui-section>
     <ui-container>
       <ui-heading>Warum eine smartgarden App?</ui-heading>
       <ui-grid container>
         <ui-grid item md="4">
-          <ui-heading variant="h2">Bewässerungsplan</ui-heading>
-          <p>
-            Individualisierbare Bewässerungsplände für alle deine Bedürfnisse.
-          </p>
+          <ui-card>
+            <ui-heading variant="h2">Bewässerungsplan</ui-heading>
+            <p>
+              Individualisierbare Bewässerungsplände für alle deine Bedürfnisse.
+            </p>
+          </ui-card>
         </ui-grid>
         <ui-grid item md="4">
-          <ui-heading variant="h2">Temperaturmessung</ui-heading>
-          <p>
-            Mit den Temperatursensoren am smartgarden device weißt du immer, welche Temperatur in deinem Beet herscht.
-          </p>
+          <ui-card>
+            <ui-heading variant="h2">Temperaturmessung</ui-heading>
+            <p>
+              Mit den Temperatursensoren am smartgarden device weißt du immer, welche Temperatur in deinem Beet herscht.
+            </p>
+          </ui-card>
         </ui-grid>
         <ui-grid item md="4">
-          <ui-heading variant="h2">Bodenfeuchtigkeit</ui-heading>
-          <p>
-            Perfekte Bedingungen für deine Pflanzen erreichst du durch eine optimale Bodenfeuchte.
-          </p>
+          <ui-card>
+            <ui-heading variant="h2">Bodenfeuchtigkeit</ui-heading>
+            <p>
+              Perfekte Bedingungen für deine Pflanzen erreichst du durch eine optimale Bodenfeuchte.
+            </p>
+          </ui-card>
         </ui-grid>
       </ui-grid>
     <ui-container>
@@ -42,33 +53,38 @@ export const Primary = () => html`<div>
     <ui-container>
       <ui-heading>Die Funktionen</ui-heading>
 
-      <ui-grid container>
-        <ui-grid item md="6">
-          <img src=${teaserOne} width="100%" />
+      <ui-card>
+        <ui-grid container>
+          <ui-grid item md="6">
+            <img src=${teaserOne} width="100%" />
+          </ui-grid>
+          <ui-grid item md="6">
+            <ui-heading variant="h3">Übersicht</ui-heading>
+            <ul>
+                  <li>Erstellung von Bewässerungsplänen</li>
+                  <li>Dashboard</li>
+                  <li>Echtzeit-Informationen</li>
+                </ul>
+          </ui-grid>
         </ui-grid>
-        <ui-grid item md="6">
-          <ui-heading variant="h3">Übersicht</ui-heading>
-          <ul>
-                <li>Erstellung von Bewässerungsplänen</li>
-                <li>Dashboard</li>
-                <li>Echtzeit-Informationen</li>
-              </ul>
-        </ui-grid>
-      </ui-grid>
+      </ui-card>
 
-      <ui-grid container>
-        <ui-grid item md="6">
-          <ui-heading variant="h3">Smardgarden Device</ui-heading>
-          <p>
-            Das Smartgarden Device macht dein Hoochbeet smart und lässt sich über die smartgarden app bedienen.
-          </p>
+      <ui-card>
+        <ui-grid container>
+          <ui-grid item md="6">
+            <ui-heading variant="h3">Smardgarden Device</ui-heading>
+            <p>
+              Das Smartgarden Device macht dein Hoochbeet smart und lässt sich über die smartgarden app bedienen.
+            </p>
+          </ui-grid>
+          <ui-grid item md="6">
+            <img src=${teaserTwo} width="100%" />
+          </ui-grid>
         </ui-grid>
-        <ui-grid item md="6">
-          <img src=${teaserTwo} width="100%" />
-        </ui-grid>
-      </ui-grid>
+      </ui-card>
     <ui-container>
   </ui-section>
+
   <ui-section>
     <ui-container>
       <ui-heading>Das sagen unsere Nutzer</ui-heading>
