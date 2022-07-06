@@ -1,5 +1,5 @@
-
 Steps:
+
 1. Initialize GIT Repository with git init
 2. Initialize NPM Package with npm init
 3. Install Webpack https://webpack.js.org/guides/installation/
@@ -11,8 +11,12 @@ Steps:
 
 ## Breakpoints
 
-Mini	up to 479px	Phones portrait
-Small	480px to 767px	Phones landscape
-Medium	768px to 959px	Tablets portrait
-Large	960px to 1199px	Desktops & tablets landscape
-Xlarge	1200px and larger	Large Desktops
+Mini up to 479px Phones portrait
+Small 480px to 767px Phones landscape
+Medium 768px to 959px Tablets portrait
+Large 960px to 1199px Desktops & tablets landscape
+Xlarge 1200px and larger Large Desktops
+
+# install
+
+npm install

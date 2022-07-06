@@ -1,15 +1,21 @@
-import {LitElement, css, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { LitElement, css, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
-@customElement('ui-card')
+@customElement("ui-card")
 export class Card extends LitElement {
   static styles = css`
-    .ui-card {
-        box-shadow:         3px 3px 5px 6px #ccc;
+    :host {
+      box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+      padding: 30px 30px;
+      display: block;
+    }
+
+    :host-context([match]) {
+      flex: auto;
     }
   `;
 
   render() {
-    return html`<div class="ui-card"><slot></slot></div>`;
+    return html`<slot></slot>`;
   }
 }

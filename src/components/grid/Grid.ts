@@ -1,7 +1,7 @@
-import { css, html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { css, html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
-@customElement('ui-grid')
+@customElement("ui-grid")
 export class Grid extends LitElement {
   static styles = css`
     :host([container]) {
@@ -9,10 +9,21 @@ export class Grid extends LitElement {
       width: 100%;
       justify-content: space-between;
       flex-wrap: wrap;
+      margin: 0;
+      margin-left: -30px;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    :host([container][match]) ::slotted(ui-grid[item]) {
+      display: flex;
     }
 
     :host([item]) {
       flex: 1 1 100%;
+      padding-left: 30px;
+      box-sizing: border-box;
     }
 
     @media (min-width: 480px) {
@@ -170,7 +181,6 @@ export class Grid extends LitElement {
         flex-basis: 100%;
       }
     }
-    
   `;
 
   render() {

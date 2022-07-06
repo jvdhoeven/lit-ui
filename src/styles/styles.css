@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --ui-base-font-color: #333333;
+    --ui-base-font-family: Roboto;
+    --ui-base-font-size: 16px;
+
+    --ui-heading-font-color: var(--ui-base-font-color);
+    --ui-heading-font-family: var(--ui-base-font-family);
+}
+
+html, body {
+    font-family: var(--ui-base-font-family);
+    color: var(--ui-base-font-color);
+    font-size: var(--ui-base-font-size);
+    line-height: 1.5;
+}
+
+/* UTILS */
+
+.ui-text-left {
+    text-align: left;
+}
+
+.ui-text-center {
+    text-align: center;
+}
+
+.ui-text-right {
+    text-align: right;
+}
+
+.ui-margin-1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.ui-margin-2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.ui-margin-3 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.ui-margin-4 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
