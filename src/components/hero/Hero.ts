@@ -7,8 +7,34 @@ import "../grid/Grid";
 @customElement("ui-hero")
 export class Hero extends LitElement {
   static styles = css`
+    .ui-hero {
+      background-size: cover;
+    }
+
+    .ui-hero__container {
+      margin-top: 0;
+      align-items: center;
+    }
+
     .ui-hero__image {
       text-align: center;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .ui-hero {
+        height: 450px;
+      }
+  
+      .ui-hero__container {
+        height: 420px;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .ui-hero__image {
+          display: initial;
+      }
     }
 
     :host([light]) {
@@ -22,11 +48,11 @@ export class Hero extends LitElement {
   render() {
     return html`<div
       class="ui-hero"
-      style="background: url(${this.background})"
+      style="background-image: url(${this.background})"
     >
-      <ui-section>
+      <ui-section nopadding>
         <ui-container>
-          <ui-grid container>
+          <ui-grid container class="ui-hero__container">
             <ui-grid item md="6">
               <slot name="heading"></slot>
               <slot name="text"></slot>

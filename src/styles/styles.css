@@ -49,3 +49,54 @@ html, body {
     margin-top: 32px;
     margin-bottom: 32px;
 }
+
+.ui-text-lighter {
+    color: #666;
+}
+
+@media (min-width: 480px) {
+    .ui-hidden-s {
+        display: none;
+    }
+}
+@media (max-width: 479px) {
+    .ui-visible-s {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ui-hidden-m {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .ui-visible-m {
+        display: none !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .ui-hidden-l {
+        display: none;
+    }
+}
+
+@media (max-width: 959px) {
+    .ui-visible-l {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ui-hidden-xl {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ui-visible-xl {
+        display: none !important;
+    }
+}

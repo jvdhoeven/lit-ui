@@ -4,25 +4,40 @@ import { customElement, property } from "lit/decorators.js";
 @customElement("ui-section")
 export class Section extends LitElement {
   static styles = css`
-    :host {
+    .ui-section {
       padding-top: 40px;
       padding-bottom: 40px;
       display: block;
     }
 
     @media (min-width: 960px) {
-      :host {
+      .ui-section {
         padding-top: 70px;
         padding-bottom: 70px;
       }
     }
 
-    :host([primary]) {
+    .ui-section--no-padding {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .ui-section--primary {
       background-color: #f8f8f8;
     }
   `;
 
+  @property({type: Boolean})
+  noPadding: boolean = false;
+
+  @property({type: Boolean})
+  primary: boolean = false;
+
   render() {
-    return html`<slot></slot>`;
+    console.log(this.noPadding);
+
+    return html`<div class="ui-section ${this.noPadding ? 'ui-section--no-padding' : ''} ${this.primary ? 'ui-section--primary' : ''}">
+      <slot></slot>
+    </div>`;
   }
 }

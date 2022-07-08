@@ -4,6 +4,10 @@ import { customElement, property } from "lit/decorators.js";
 @customElement("ui-heading")
 export class Heading extends LitElement {
   static styles = css`
+    :host {
+      display: block;
+    }
+  
     .heading {
       line-height: 1.2;
     }

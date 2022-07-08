@@ -6,23 +6,24 @@ export class Grid extends LitElement {
   static styles = css`
     :host([container]) {
       display: flex;
-      width: 100%;
       justify-content: space-between;
       flex-wrap: wrap;
       margin: 0;
       margin-left: -30px;
+      margin-top: -30px;
       padding: 0;
       list-style: none;
       box-sizing: border-box;
     }
 
-    :host([container][match]) ::slotted(ui-grid[item]) {
+    :host([item][match]) {
       display: flex;
     }
 
     :host([item]) {
       flex: 1 1 100%;
       padding-left: 30px;
+      padding-top: 30px;
       box-sizing: border-box;
     }
 

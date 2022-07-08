@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src/index.ts',
@@ -16,6 +17,16 @@ module.exports = {
         exclude: [/node_modules/, /\.stories\.ts$/],
       },
       {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            // make all svg images to work in IE
+            iesafe: true,
+          },
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
@@ -28,6 +39,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+  plugins: [new MiniCssExtractPlugin()],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),

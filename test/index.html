@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Basic HTML5 Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../dist/bundle.js"></script>
+    <link href="main.css" rel="stylesheet" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header {
+            height: 80px;
+            background: #f8f8f8;
+            display: flex;
+        }
+
+        .Header__logo, .Header__navigation {
+            display: flex;
+            align-items: center;
+        }
+
+        .Header__navigation {
+            margin-left: auto;
+        }
+
+        .Logo {
+            font-size: 24px !important;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .ui-navbar-item, .Navigation>li>a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.25em;
+            padding: 0 15px;
+            font-size: .875rem;
+        }
+
+        .Navigation {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .Navigation>li>a {
+            color: #999;
+            text-transform: uppercase;
+            transition: .1s ease-in-out;
+            transition-property: color,background-color;
+            text-decoration: none;
+        }
+
+        .ui-text-lighter {
+            color: #666;
+        }
+
+        *+.ui-margin-small {
+            margin-top: 10px!important;
+        }
+
+        .ui-margin-small {
+            margin-bottom: 10px;
+        }
+
+        *+.ui-margin {
+            margin-top: 20px!important;
+        }
+
+        .ui-margin {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .ui-hidden-s {
+                display: none;
+            }
+        }
+        @media (max-width: 479px) {
+            .ui-visible-s {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .ui-hidden-m {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .ui-visible-m {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 960px) {
+            .ui-hidden-l {
+                display: none;
+            }
+        }
+
+        @media (max-width: 959px) {
+            .ui-visible-l {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .ui-hidden-xl {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .ui-visible-xl {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="Header">
+            <div class="Header__logo">
+                <a class=" Logo ui-navbar-item" href="#">
+                    <img src="sprout.png">
+                    <span>smartgarden</span>
+                </a>
+            </div>
+            <div class="Header__navigation">
+                <ul class="Navigation">
+                    <li><a href="#">Funktionen</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <ui-hero background="hero-background.jpg" light>
+            <ui-heading slot="heading" component="h1" light>Mit der smartgarden App zum grünen Daumen.</ui-heading>
+            <p slot="text" class="ui-margin-4">
+                Nie wieder vertrocknete Pflanzen. Nie wieder hohe
+                Wasserkostenabrechnungen. Die Lösung in einer App.
+            </p>
+            <div slot="actions">
+                <ui-app-button os="ios"></ui-app-button>
+                <ui-app-button os="android"></ui-app-button>
+            </div>
+            <img slot="image" src="screen.png" />
+        </ui-hero>
+        <ui-section>
+            <ui-container>
+                <ui-heading component="h2" variant="h2" class="ui-text-center">Warum eine smartgarden App?</ui-heading>
+                <ui-grid container match>
+                    <ui-grid item lg="4">
+                        <ui-card>
+                            <ui-icon icon="watering-can" color="white"></ui-icon>
+                            <ui-heading variant="h2" class="ui-text-center ui-margin-small">Bewässerungsplan</ui-heading>
+                            <p class="ui-text-lighter">
+                                Individualisierbare Bewässerungsplände für alle deine Bedürfnisse.
+                            </p>
+                        </ui-card>
+                    </ui-grid>
+                    <ui-grid item lg="4">
+                        <ui-card>
+                            <ui-icon icon="sun-thermometer" color="white"></ui-icon>
+                            <ui-heading variant="h2" class="ui-text-center ui-margin-small">Temperaturmessung</ui-heading>
+                            <p class="ui-text-lighter">
+                                Mit den Temperatursensoren am smartgarden device weißt du immer,
+                                welche Temperatur in deinem Beet herscht.
+                            </p>
+                        </ui-card>
+                    </ui-grid>
+                    <ui-grid item lg="4">
+                        <ui-card>
+                            <ui-icon icon="flower-tulip" color="white"></ui-icon>
+                            <ui-heading variant="h2" class="ui-text-center ui-margin-small">Bodenfeuchtigkeit</ui-heading>
+                            <p class="ui-text-lighter">
+                                Perfekte Bedingungen für deine Pflanzen erreichst du durch eine
+                                optimale Bodenfeuchte.
+                            </p>
+                        </ui-card>
+                    </ui-grid>
+                </ui-grid>
+            </ui-container>
+        </ui-section>
+        <ui-section primary>
+            <ui-container>
+                <ui-heading component="h2" variant="h2" class="ui-text-center">Die Funktionen</ui-heading>
+
+                <ui-card class="ui-margin" nopadding>
+                    <ui-grid container>
+                        <ui-grid item md="6">
+                            <img src="teaser1.jpg" width="100%" />
+                        </ui-grid>
+                        <ui-grid item md="6">
+                            <ui-heading variant="h3">Übersicht</ui-heading>
+                            <ul>
+                                <li>Erstellung von Bewässerungsplänen</li>
+                                <li>Dashboard</li>
+                                <li>Echtzeit-Informationen</li>
+                            </ul>
+                        </ui-grid>
+                    </ui-grid>
+                </ui-card>
+
+                <ui-card class="ui-margin" nopadding>
+                    <ui-grid container>
+                        <ui-grid item md="6">
+                            <ui-heading variant="h3">Smardgarden Device</ui-heading>
+                            <p>
+                                Das Smartgarden Device macht dein Hoochbeet smart und lässt sich
+                                über die smartgarden app bedienen.
+                            </p>
+                        </ui-grid>
+                        <ui-grid item md="6">
+                            <img src="teaser2.png" width="100%" />
+                        </ui-grid>
+                    </ui-grid>
+                </ui-card>
+            </ui-container>
+        </ui-section>
+
+        <ui-section>
+            <ui-container>
+                <ui-heading component="h2" variant="h2" class="ui-text-center">Das sagen unsere Nutzer</ui-heading>
+                Foo
+            </ui-container>
+        </ui-section>
+    </div>
+</body>
+
+</html>
