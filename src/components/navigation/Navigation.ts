@@ -16,8 +16,6 @@ export class Navigation extends LitElement {
   navigation: { label: string};
 
   render() {
-    console.log(this.navigation)
-
     return html`<div class="ui-navigation">
       <slot></slot>
     </div>`;

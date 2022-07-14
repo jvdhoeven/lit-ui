@@ -42,6 +42,7 @@ export class Heading extends LitElement {
       color: var(--ui-heading-font-color, var(--ui-base-font-color, inherit));
       font-size: 20px;
       font-weight: 300;
+      margin-bottom: 20px;
     }
 
     .heading--h4 {

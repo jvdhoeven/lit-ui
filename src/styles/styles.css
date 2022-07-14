@@ -30,6 +30,62 @@ html, body {
     text-align: right;
 }
 
+@media (min-width: 480px) {
+    .ui-text-left\@s {
+        text-align: left !important;
+    }
+    .ui-text-center\@s {
+        text-align: center !important;
+    }
+    .ui-text-right\@s {
+        text-align: right !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ui-text-left\@m {
+        text-align: left !important;
+    }
+    .ui-text-center\@m {
+        text-align: center !important;
+    }
+    .ui-text-right\@m {
+        text-align: right !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .ui-text-left\@l {
+        text-align: left !important;
+    }
+    .ui-text-center\@l {
+        text-align: center !important;
+    }
+    .ui-text-right\@l {
+        text-align: right !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ui-text-left\@xl {
+        text-align: left !important;
+    }
+    .ui-text-center\@xl {
+        text-align: center !important;
+    }
+    .ui-text-right\@xl {
+        text-align: right !important;
+    }
+}
+
+.ui-text-bold {
+    font-weight: 700;
+}
+
+.ui-text-lighter {
+    color: #666;
+}
+
 .ui-margin-1 {
     margin-top: 8px;
     margin-bottom: 8px;
@@ -48,10 +104,6 @@ html, body {
 .ui-margin-4 {
     margin-top: 32px;
     margin-bottom: 32px;
-}
-
-.ui-text-lighter {
-    color: #666;
 }
 
 @media (min-width: 480px) {

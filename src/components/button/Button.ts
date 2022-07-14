@@ -32,6 +32,12 @@ export class Button extends LitElement {
       border: 1px solid transparent;
     }
 
+    .ui-button--variant-secondary {
+      background-color: #ffffff;
+      color: #1e87f0;
+      border: 1px solid #1e87f0;
+    }
+
     .ui-button:not(:disabled) {
         cursor: pointer;
     }
@@ -39,6 +45,11 @@ export class Button extends LitElement {
     .ui-button--variant-primary:hover {
       background-color: #0f7ae5;
       color: #fff;
+    }
+
+    .ui-button--variant-secondary:hover {
+      background-color: #fff;
+      color: #0f7ae5;
     }
 
     .ui-button:hover {
@@ -54,7 +65,7 @@ export class Button extends LitElement {
   `;
 
   @property()
-  variant: 'primary' = 'primary';
+  variant: 'primary' | 'secondary' = 'primary';
 
   render() {
     return html`<button class="ui-button ui-button--variant-${this.variant}"><slot></slot></button>`;

@@ -22,21 +22,24 @@ export class Section extends LitElement {
       padding-bottom: 0;
     }
 
-    .ui-section--primary {
+    .ui-section--variant-primary {
       background-color: #f8f8f8;
+    }
+
+    .ui-section--variant-dark {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
     }
   `;
 
   @property({type: Boolean})
   noPadding: boolean = false;
 
-  @property({type: Boolean})
-  primary: boolean = false;
+  @property()
+  variant = "default";
 
   render() {
-    console.log(this.noPadding);
-
-    return html`<div class="ui-section ${this.noPadding ? 'ui-section--no-padding' : ''} ${this.primary ? 'ui-section--primary' : ''}">
+    return html`<div class="ui-section ui-section--variant-${this.variant} ${this.noPadding ? 'ui-section--no-padding' : ''}">
       <slot></slot>
     </div>`;
   }

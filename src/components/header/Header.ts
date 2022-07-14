@@ -1,5 +1,5 @@
 import {LitElement, css, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import {customElement} from 'lit/decorators.js';
 
 @customElement('ui-header')
 export class Header extends LitElement {
@@ -23,10 +23,12 @@ export class Header extends LitElement {
   render() {
     return html`<div class="ui-header">
         <div class="ui-header__logo">
-            <slot name="logo"></slot>
+            <ui-logo href="#"></ui-logo>
         </div>
         <div class="ui-header__navigation">
-          <slot name="navigation"></slot>
+          <ui-navigation>
+            <slot></slot>
+          </ui-navigation>
         </div>
     </div>`;
   }
